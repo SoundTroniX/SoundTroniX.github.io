@@ -1,0 +1,580 @@
+/* 
+Общие стили
+*/
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(248, 248, 248);
+}
+
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  margin: 0;
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  margin: 0;
+  font-family: TTLakes;
+}
+
+p {
+  margin: 0;
+}
+
+/* 
+Подключение шрифтов
+*/
+
+@font-face {
+  font-family: "TTLakes";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/TTLakes-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "TTLakes";
+  font-style: bold;
+  font-weight: 700;
+  src: url("./fonts/TTLakes-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "TTLakes";
+  font-style: medium;
+  font-weight: 500;
+  src: url("./fonts/TTLakes-Medium.woff") format("woff");
+}
+
+/* 
+Стили для 320px 
+*/
+
+@media (min-width: 320px) and (max-width: 767px) {
+  body {
+    margin: 0 auto;
+  }
+
+  /*
+Header стили 320px
+*/
+
+  .header {
+    background: rgb(255, 255, 255);
+  }
+
+  .header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-bottom: solid 1px rgb(217, 255, 245);
+  }
+
+  .header__menu-second,
+  .header__menu-first {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .header__menu-first {
+    margin-left: 15px;
+  }
+
+  .header__menu-second {
+    margin-right: 15px;
+  }
+
+  .header__chat,
+  .header__call,
+  .header__divider,
+  .header__profile,
+  .header__text1,
+  .header__text2 {
+    display: none;
+    visibility: hidden;
+  }
+
+  /*
+ Стили для Title 320px
+*/
+
+  .h1 {
+    font-family: TTLakes;
+    color: rgb(27, 28, 33);
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 12px;
+  }
+
+  .main__title {
+    margin-top: 19px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: start;
+  }
+
+  /*
+Стили слайд меню 320px
+*/
+
+  .main__slide {
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+
+  .main__slide--list {
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+  }
+
+  .slide--item {
+    padding: 7px 10px 7px 17px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+
+  .slide--item:first-child {
+    border: 2px solid rgb(184, 255, 236);
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .main-slide--link {
+    white-space: pre;
+    color: rgb(126, 126, 130);
+    font-family: TTLakes;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  /*
+Стили первого блока 320px
+*/
+
+  .main__about {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main__p1 {
+    margin-left: 16px;
+    color: rgb(27, 28, 33);
+    font-family: TTLakes;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 14px;
+    width: 288px;
+  }
+
+  .main__p2 {
+    display: none;
+    visibility: hidden;
+  }
+
+  .readmore {
+    display: flex;
+    margin-left: 10px;
+  }
+  .about__picture {
+    padding-top: 10px;
+  }
+
+  .readmore__text {
+    color: rgb(27, 28, 33);
+    font-family: TTLakes;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .main__text--hidden {
+    display: none;
+    visibility: hidden;
+  }
+
+  .main__picture-1 {
+    width: 320px;
+    height: 176px;
+  }
+}
+
+/* 
+Стили для 768px - 1120px 
+*/
+
+@media (min-width: 767px) and (max-width: 1120px) {
+  body {
+    max-width: 1140px;
+  }
+
+  .header {
+    background: rgb(255, 255, 255);
+  }
+
+  /*
+Header стили 768px - 1120px
+*/
+
+  .header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    border-bottom: solid 1px rgb(217, 255, 245);
+  }
+
+  .header__menu-second,
+  .header__menu-first {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .header__menu-first {
+    margin-left: 25px;
+  }
+
+  .header__menu-second {
+    margin-right: 25px;
+  }
+  .header__divider {
+    width: 32px;
+    height: 40px;
+  }
+
+  .header__text1,
+  .header__text2 {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* 
+Стили для Title  768px - 1120px 
+*/
+
+  .h1 {
+    font-family: TTLakes;
+    color: rgb(27, 28, 33);
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 20px;
+  }
+
+  .main__title {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: start;
+  }
+
+  /*
+Стили слайд меню 768px - 1120px 
+*/
+
+  .main__slide {
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+
+  .main__slide--list {
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+  }
+
+  .slide--item {
+    padding: 7px 10px 7px 17px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+
+  .slide--item:first-child {
+    border: 2px solid rgb(184, 255, 236);
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .main-slide--link {
+    white-space: pre;
+    color: rgb(126, 126, 130);
+    font-family: TTLakes;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  /*
+Стили первого блока 768px - 1120px 
+*/
+
+  .main__text {
+    width: 360px;
+  }
+
+  .main__about {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .main__p1 {
+    margin-left: 16px;
+    color: rgb(27, 28, 33);
+    font-family: TTLakes;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 14px;
+    width: 288px;
+  }
+
+  .main__p2 {
+    margin-left: 16px;
+    color: rgb(27, 28, 33);
+    font-family: TTLakes;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 14px;
+    width: 288px;
+  }
+
+  .readmore__text {
+    color: rgb(27, 28, 33);
+    font-family: TTLakes;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .readmore {
+    display: flex;
+    margin-left: 10px;
+  }
+  .main__picture {
+    padding-top: 10px;
+    margin-left: 40px;
+  }
+
+  .main__picture-1 {
+    width: 360px;
+    height: 260px;
+  }
+  .main__text--hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+/* 
+Стили для 1120px и больше 
+*/
+
+@media (min-width: 1120px) {
+  body {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  /*
+Header стили 1120px и больше
+*/
+
+  .header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    border-bottom: solid 1px rgb(217, 255, 245);
+  }
+
+  .header__menu {
+    margin-bottom: -65px;
+    padding-top: 40px;
+    padding-right: 30px;
+  }
+
+  .header__menu-second,
+  .header__menu-first {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .header__menu-first {
+    margin-left: 25px;
+  }
+
+  .header__menu-second {
+    margin-right: 25px;
+  }
+  .header__divider {
+    width: 32px;
+    height: 40px;
+  }
+  .header__call,
+  .header__chat,
+  .header__profile,
+  .header__divider,
+  .header__logo,
+  .header__burger {
+    display: none;
+    visibility: hidden;
+  }
+
+  .header__text1,
+  .header__text2 {
+    color: rgb(27, 28, 33);
+    font-family: TTLakes;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  /* 
+Стили для Title  1120px и больше 
+*/
+
+  .h1 {
+    font-family: TTLakes;
+    color: rgb(27, 28, 33);
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 20px;
+  }
+
+  .main__title {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: start;
+  }
+
+  /*
+Стили слайд меню 1120px и больше 
+*/
+
+  .main__slide {
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+
+  .main__slide--list {
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+    flex-wrap: wrap;
+  }
+
+  .slide--item {
+    padding: 7px 10px 7px 17px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+
+  .slide--item:first-child {
+    border: 2px solid rgb(184, 255, 236);
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .main-slide--link {
+    white-space: pre;
+    color: rgb(126, 126, 130);
+    font-family: TTLakes;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  /*
+Стили первого блока 768px - 1120px 
+*/
+
+  .main__text {
+    width: 490px;
+    height: 160px;
+    color: rgb(27, 28, 33);
+    font-family: TTLakes;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 15px;
+    max-width: 490px;
+    max-height: 160px;
+    margin-left: 24px;
+  }
+
+  .main__about {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .main__p1 {
+    margin-left: 16px;
+    color: rgb(27, 28, 33);
+    font-family: TTLakes;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 14px;
+    width: 490px;
+    margin-bottom: 20px;
+  }
+
+  .main__p2 {
+    margin-left: 16px;
+    color: rgb(27, 28, 33);
+    font-family: TTLakes;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 14px;
+    width: 490px;
+  }
+
+  .readmore__text {
+    color: rgb(27, 28, 33);
+    font-family: TTLakes;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .readmore {
+    display: flex;
+    margin-left: 10px;
+  }
+  .main__picture {
+    padding-top: 10px;
+    margin-left: 40px;
+  }
+
+  .main__picture-1 {
+    width: 531px;
+    height: 307px;
+    margin-left: 25px;
+  }
+}
